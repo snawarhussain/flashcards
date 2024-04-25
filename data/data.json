@@ -1,0 +1,8 @@
+[
+    {"word": "Buch", "article": "das", "plural": "die Bücher"},
+    {"word": "Apfel", "article": "der", "plural": "die Äpfel"},
+    {"word": "Uhr", "article": "die", "plural": "die Uhren"},
+    {"word": "Tisch", "article": "der", "plural": "die Tische"},
+    {"word": "Stuhl", "article": "der", "plural": "die Stühle"},
+    {"word": "Schuh", "article": "der", "plural": "die Schuhe"}
+]

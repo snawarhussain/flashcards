@@ -1,0 +1,43 @@
+.card-wrapper {
+    width: 25rem;
+    height: 200px;
+    perspective: 1000px; /* Needed for 3D rotation */
+}
+.card-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer; /* Indicates that you can click */
+}
+.card-front, .card-back {
+    background-color: #c85252;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.card-front p, .card-back p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: large;
+    margin: 0;
+}
+.card-back {
+    transform: rotateX(180deg);
+}
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    margin-top: 20px;
+}
+
+.card-body.is-flipped {
+    transform: rotateX(180deg);
+}
