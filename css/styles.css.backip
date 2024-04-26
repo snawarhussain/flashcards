@@ -1,0 +1,78 @@
+.card-wrapper {
+    width: 25rem;
+    height: 200px;
+    display: inline-block;
+    transition: transform 0.5s ease;
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    position: absolute;
+    left: 50%;
+    margin-left: -12.5rem; /* Half of the width */
+}
+.card-wrapper.main {
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.card-wrapper.side {
+    transform: scale(0.8);
+    z-index: 1;
+}
+.card-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer; /* Indicates that you can click */
+}
+.card-front, .card-back {
+    background-color: #c85252;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.card-front p, .card-back p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: large;
+    margin: 0;
+}
+.card-back {
+    transform: rotateX(180deg);
+}
+.carousel {
+    perspective: 1200px;
+    height: 300px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 50px;
+    transform-style: preserve-3d;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+button.next {
+    right: 20px;
+}
+
+button.prev {
+    left: 20px;
+}
+.card-body.is-flipped {
+    transform: rotateX(180deg);
+}
